@@ -104,6 +104,11 @@
 # decode_DDP=0x00000000
 
 ################################################################################
+# Enable ir_gpio_recv driver for TSOP-style IR receivers on Raspberries' pin 18
+################################################################################
+dtoverlay=ir-gpio
+
+################################################################################
 # End of default configuration
 # all values below this line were inserted from config.txt.bk (your old config)
 # and can be merged with the above values
