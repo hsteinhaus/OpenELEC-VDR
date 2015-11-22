@@ -137,9 +137,6 @@ post_makeinstall_target() {
   rm -rf $INSTALL/usr/lib/*.map
   rm -rf $INSTALL/var
 
-# remove locales and charmaps
-  rm -rf $INSTALL/usr/share/i18n/charmaps
-
   if [ ! "$GLIBC_LOCALES" = yes ]; then
     # remove locales and charmaps
     rm -rf $INSTALL/usr/share/i18n/charmaps
