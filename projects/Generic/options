@@ -12,6 +12,9 @@
         #
         TARGET_CPU="x86-64"
         ;;
+      i*86)
+	TARGET_CPU="i686"
+        ;;
     esac
 
   # Bootloader to use (syslinux / u-boot)
