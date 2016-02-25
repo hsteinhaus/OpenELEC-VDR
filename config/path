@@ -219,8 +219,8 @@ BUILD_INDENT_SIZE=4
   boldmagenta="\e[1;35m"
   cyan="\e[0;36m"
   boldcyan="\e[1;36m"
-  white="\e[0;37m"
-  boldwhite="\e[1;37m"
+  white="\e[0;38m"
+  boldwhite="\e[1;38m"
   endcolor="\e[0m"
 
 # multilib? nah
