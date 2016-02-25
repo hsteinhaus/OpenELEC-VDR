@@ -25,7 +25,7 @@ PKG_ARCH="any"
 PKG_LICENSE="GPL"
 PKG_SITE="http://pulseaudio.org/"
 PKG_URL="http://www.freedesktop.org/software/pulseaudio/releases/$PKG_NAME-$PKG_VERSION.tar.xz"
-PKG_DEPENDS_TARGET="toolchain libtool json-c alsa-lib libsndfile soxr dbus systemd libressl libcap"
+PKG_DEPENDS_TARGET="toolchain libtool json-c alsa-lib libsndfile soxr dbus systemd libressl libcap glib"
 PKG_PRIORITY="optional"
 PKG_SECTION="audio"
 PKG_SHORTDESC="pulseaudio: Yet another sound server for Unix"
@@ -65,7 +65,7 @@ PKG_CONFIGURE_OPTS_TARGET="--disable-silent-rules \
                            --disable-esound \
                            --disable-solaris \
                            --disable-waveout \
-                           --disable-glib2 \
+                           --enable-glib2 \
                            --disable-gtk3 \
                            --disable-gconf \
                            $PULSEAUDIO_AVAHI \
@@ -112,6 +112,7 @@ post_makeinstall_target() {
   rm -rf $INSTALL/usr/share/vala
   rm -rf $INSTALL/usr/share/zsh
   rm -rf $INSTALL/usr/share/bash-completion
+  ln -s pulseaudio/libpulsecommon-7.0.so $INSTALL/usr/lib
 
   cp $PKG_DIR/config/system.pa $INSTALL/etc/pulse/
 
