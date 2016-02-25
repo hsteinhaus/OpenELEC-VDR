@@ -31,3 +31,8 @@ PKG_LONGDESC="testing: Metapackage for various packages to test while developing
 
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
+
+$SCRIPTS/install strace
+$SCRIPTS/install spice-gtk
+$SCRIPTS/install dhcpc
+$SCRIPTS/install pciutils
